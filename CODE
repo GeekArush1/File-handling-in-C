@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(){
+   FILE * file;
+   int a;
+   if (file = fopen("C:\\Users\\arusa\\CLionProjects\\untitled10\\cmake-build-debug\\Program.txt", "rb")){
+      printf("File opened successfully in read mode");
+   }
+   else
+   printf("The file is not present! cannot create a new file using rb mode");
+   while(1){
+     a=getw(file);
+     printf("%d",a);
+     if(a==EOF){
+         break;
+     }
+   }
+   fclose(file);
+   return 0;
+}
